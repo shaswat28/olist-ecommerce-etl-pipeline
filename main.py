@@ -16,7 +16,7 @@ def run_pipeline():
         shipping_costs = get_shipping_efficiency(spark, "./data")
         hourly_trends = get_order_volume_by_hour(spark, fact_sales)
 
-        db_password = "Spidey28!" 
+        db_password = "" 
         load_to_mysql(fact_sales, "fact_sales", db_password)
         load_to_mysql(category_revenue, "category_revenue_report", db_password)
         load_to_mysql(top_customers, "top_spending_customers", db_password)
